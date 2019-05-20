@@ -67,11 +67,11 @@ private
     end
   end
 
-  def position_priority(board, mark)
+  def position_priority(board, name)
     Board::WINNING_PLACES.each do |winning_place|
       priority_positions_order = [[0, 1, 2], [0, 2, 1], [1, 2, 0]]
       priority_positions_order.each do |priority|
-        if (board.positions_with_values["#{winning_place[priority[0]]}"] == mark) and (board.positions_with_values["#{winning_place[priority[1]]}"] == name)
+        if (board.positions_with_values["#{winning_place[priority[0]]}"] == name) and (board.positions_with_values["#{winning_place[priority[1]]}"] == name)
           if board.positions_with_values["#{winning_place[priority[2]]}"] == " "
             return winning_place[priority[2]]
           end
