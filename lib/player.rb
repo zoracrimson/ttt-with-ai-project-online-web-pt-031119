@@ -75,3 +75,8 @@ private
           if board.positions_with_values["#{winning_place[priority[2]]}"] == " "
             return winning_place[priority[2]]
           end
+        end
+      end
+    end
+    return nil
+  end
